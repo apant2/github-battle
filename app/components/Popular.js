@@ -24,7 +24,7 @@ class Popular extends React.Component {
 
     //dont know what this is bound to unless you bind this method to some object
     updateLanguage(lang){
-        this.setState(function(lang){
+        this.setState(function(){
             return {
                 selectedLanguage: lang
             }
@@ -50,8 +50,7 @@ class Popular extends React.Component {
                         //then assign this new function to onClick param
                         onClick={this.updateLanguage.bind(null,lang)}
                         style={lang === this.state.selectedLanguage ? {color: '#d0021b'}:null}
-                        key = {lang}
-                        onClick={this.updateLanguage}>
+                        key = {lang}>
                             {lang}
                         </li>);
                 }, this)}
