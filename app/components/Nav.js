@@ -5,7 +5,7 @@ function Nav () {
 
     return (
         <ul className='nav'>
-            <li><NavLink exact
+            <li><NavLink exact //only active when the patch is EXACTLY /
                          activeClassName='active'
                          to='/'>
                     Home
